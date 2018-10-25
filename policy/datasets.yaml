@@ -1147,3 +1147,16 @@ deepCoadd_ngmix_schema:
     storage: FitsCatalogStorage
     python: lsst.afw.table.SourceCatalog
     template: schema/ngmix.fits
+
+deepCoadd_mcalmax:
+    description: Output catalog from running metacal on coadds using max likelihood.
+    persistable: ignored
+    storage: FitsCatalogStorage
+    python: lsst.afw.table.SourceCatalog
+    template: deepCoadd-results/merged/%(tract)d/%(patch)s/mcalmax-%(tract)d-%(patch)s.fits
+deepCoadd_mcalmax_schema:
+    description: Zero-size schema catalog for deepCoadd_mcalmax
+    persistable: ignored
+    storage: FitsCatalogStorage
+    python: lsst.afw.table.SourceCatalog
+    template: schema/mcalmax.fits
